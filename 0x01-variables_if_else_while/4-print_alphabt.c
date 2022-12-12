@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <ctype.h>
+
 /**
  * main - Entry point
  *
@@ -8,16 +8,15 @@
 
 int main(void)
 {
-int alph;
-int letter;
+char c;
 
-for (alph = 'A'; alph <= 'Z'; alph++)
+for (c = 'a' ; c <= 'z' ; c++)
 {
-if((alph != 'e') & (alph != 'q'))
+if ((c == 'q' || c == 'e') !=1)
 {
-letter = alph;
-putchar(tolower(letter));
+putchar(c);
 }
+
 }
 putchar('\n');
 return (0);
