@@ -8,11 +8,12 @@
  * Return: Nothing
  */
 
-void puts_half(char *str) 
+void puts_half(char *str)
 {
 	int i;
 	int len = strlen(str);
 	int half = len / 2;
+
 	if (len % 2 == 1)
 	{
 		half = (len - 1) / 2;
