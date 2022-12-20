@@ -6,10 +6,11 @@
  *
  * @str: string parameter input
  *
- * Return: Noting
-*/
+ * Return: Nothing
+ */
 
 void puts2(char *str)
+
 {
 	for (int i = 0; str[i] != '\0'; i += 2)
 	{
