@@ -1,29 +1,26 @@
-#include "main.h"
-#include <stdio.h>
-#include <string.h>
-
 /**
- * print_rev - prints a string in reverse
- * @s: a string
- * Return: string in reverse
- */
+ * rev_string - reverses a string
+ *
+ * @s: string parameter input
+ *
+ * Return: Nothing
+*/
 
-void print_rev(char *s)
+void rev_string(char *s)
 {
-    int i = 0;
+	int l, i;
+	char ch;
 
-    /* Find the end of the string */
-    while (s[i] != '\0')
-    {
-        i++;
-    }
-    i--;  /* Decrement i to point to the last character */
+	/*find string length without null char*/
+	for (l = 0; s[l] != '\0'; ++l)
+		;
 
-    /* Print the string in reverse */
-    while (i >= 0)
-    {
-        putchar(s[i]);
-        i--;
-    }
-    putchar('\n');
+	/*swap the string by looping to half the string*/
+	for (i = 0; i < l / 2; ++i)
+	{
+		ch = s[i];
+		s[i] = s[l - 1 - i]; /*-1 because the array starts from 0*/
+		s[l - 1 - i] = ch;
+	}
+
 }
