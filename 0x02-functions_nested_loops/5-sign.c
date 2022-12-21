@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * main - check the code.
@@ -7,47 +8,27 @@
  *
  */
 
-int main(void)
+int print_sign(int n) {
+  if (n > 0) {
+    printf("+\n");
+    return 1;
+  } else if (n == 0) {
+    printf("0\n");
+    return 0;
+  } else {
+    printf("-\n");
+    return -1;
+  }
+}
 
-{
-	int r;
+int main() {
+  int x = -5;
+  int y = 0;
+  int z = 10;
 
-	r = print_sign(98);
+  print_sign(x);  // prints '-'
+  print_sign(y);  // prints '0'
+  print_sign(z);  // prints '+'
 
-	_putchar(',');
-	_putchar(' ');
-
-	_putchar(r + '0');
-	_putchar('\n');
-	r = print_sign(0);
-
-	_putchar(',');
-
-	_putchar(' ');
-
-	_putchar(r + '0');
-
-	_putchar('\n');
-
-	r = print_sign(0xff);
-
-	_putchar(',');
-
-	_putchar(' ');
-
-	_putchar(r + '0');
-
-	_putchar('\n');
-
-	r = print_sign(-1);
-	_putchar(',');
-
-	_putchar(' ');
-
-	_putchar(r + '0');
-
-	_putchar('\n');
-
-	return (0);
-
+  return 0;
 }
