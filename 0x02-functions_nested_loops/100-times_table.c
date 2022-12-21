@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stdio.h>
+
 /**
  * print_times_table - print times table up to input
  *
@@ -9,7 +11,7 @@
  * Return: Nothing
  */
 
-void print_times_table(int n)
+void print_times_table(int n);
 {
 	if (n < 0 || n > 15)
 	{
